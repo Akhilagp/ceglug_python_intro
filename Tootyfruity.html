@@ -1,0 +1,86 @@
+<html>
+<head>
+<style>
+body{ 
+background-image:url("ice1.jpg");
+background-repeat:no-repeat;
+background-position:RIGHT;
+background-size: 50% 100% ;
+}
+td{
+padding:10;
+}
+
+.p1
+{
+font-family:jokerman;
+text-align:center;
+color:blue;
+font-size:28;
+font-weight:bold;
+}
+table{
+margin-left:20%; 
+margin-right:20%;
+}
+</style>
+<script>
+var item=["Butterscotch","BlackCurrant","RajBhog","Vanilla","Pista","Strawberry"];
+var val=[0,0,0,0,0,0];
+var i;
+function increase(n)
+{	val[n]=val[n]+1;
+	var status = document.getElementById(n);
+	status.value=val[n];
+}
+function display()
+{	document.write("<center><h1>HAVE A DELIGHTFUL EVE</h1><hr><br>");
+	
+	for(i=0;i<item.length;i++)
+	{	if(val[i]!=0)	
+			document.write(item[i]+"	:	"+val[i]+"<br>");
+	}
+}	
+</script>
+</head>
+<body>
+<head><title>Hotel TootyFruity</title></head>
+<h1 class="p1">TootyFruity</h1>
+<h2 class="p1">Cool Delight:PRICE TAG</h2>
+<h2 class="p1"><a href="price.html">Check If This Fits Your Wallet</a></h2>
+<marquee>
+<font face="JOKERMAN" color="light blue" size="18">
+
+
+
+
+BEAT	 THE	 HEAT	!! 	WITH 	TOOTYFRUITY 	CHILLERS          !!
+
+
+
+</marquee><br></font>
+<table>
+<tr><th>Your Choice</th><th></th><th>No. of Scoops</th></tr>
+<tr><td><input type=button onclick=increase(0) value=Butterscotch></td><td><input type="text" 
+
+id="0"></td></tr>
+<tr><td><input type=button onclick=increase(1) value=BlackCurrant></td><td><input type="text" 
+
+id="1"></td></tr>
+<tr><td><input type=button onclick=increase(2) value=RajBhog></td><td><input type="text" 
+
+id="2"></td></tr>
+<tr><td><input type=button onclick=increase(3) value=Vanilla></td><td><input type="text" 
+
+id="3"></td></tr>
+<tr><td><input type=button onclick=increase(4) value=Pista></td><td><input type="text" 
+
+id="4"></td></tr>
+<tr><td><input type=button onclick=increase(5) value=Strawberry></td><td><input type="text" 
+
+id="5"></td></tr>
+<tr><td colspan=3><center><input type="submit" onclick=display() value=PlaceOrder></td></tr> 
+</table>
+
+</body>
+</html>

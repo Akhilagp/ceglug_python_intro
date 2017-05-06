@@ -8,7 +8,7 @@ class Employee:#common base class
         Employee.empCount += 1 #class variable
         
     def displayCount(self):#class method
-        print "Total Employee %d", Employee.empCount
+        print "Total Employee ", Employee.empCount
         
     def displayEmployee(self):
         print "Name: ",self.name, "Salary: ", self.salary
@@ -17,3 +17,6 @@ emp1 = Employee("Krishna","2000")#instance object
 emp2 = Employee("Dharma","4000")
 emp1.displayEmployee()#accessing attributes
 emp2.displayEmployee()
+emp2.displayCount()
+print Employee.empCount
+    
